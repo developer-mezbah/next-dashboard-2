@@ -1,0 +1,28 @@
+.navbar-bullet li, .bullet{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.navbar-bullet li::before, .bullet{
+    position: absolute;
+    content: "";
+    width: .3rem;
+    height: .3rem;
+    border: 1px solid #a3aed1;
+    border-radius: 50%;
+    background-color: transparent;
+    inset-inline-start: .5rem;
+    opacity: .5;
+}
+.navbar-bullet li:hover:before{
+    border: 1px solid #fff;
+}
+
+
+.top-navbar{
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+}
+
+.animated-arrow{
+    rotate: 180deg;
+}
