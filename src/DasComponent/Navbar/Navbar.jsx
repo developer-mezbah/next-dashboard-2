@@ -30,7 +30,7 @@ const Navbar = () => {
   return (
     <>
       <TopNavbar handleNavbar={handleNavbar} smallNavbar={smallNavbar} />
-      <div onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} className={smallNavbar ? "w-[80px]" : "w-[250px]"}>
+      <div onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} className={smallNavbar ? "w-[80px] h-full" : "w-[250px] h-full"}>
         <div className={smallNavbar ? "hidden" : "w-[250px]"}>
           <div className="logo py-2">
             <Image
