@@ -31,7 +31,7 @@ export const NavData = [
     icon: <SiPowerpages />,
     subItems: [
       {
-        name: "Home",
+        name: "no",
         url: "/",
       },
       {

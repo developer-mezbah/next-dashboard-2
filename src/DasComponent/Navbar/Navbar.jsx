@@ -7,6 +7,7 @@ import { useState } from "react";
 import Horizontal from "../Others/Horizontal";
 import NavItems from "./NavItems";
 import SmallNavbar from "./SmallNavbar";
+import { NavData } from "@/utils/NavData";
 
 const Navbar = () => {
   const [navToggle, setNavToggle] = useState(false)
@@ -42,7 +43,7 @@ const Navbar = () => {
             />
           </div>
           <Horizontal className={"mb-2"} />
-          <NavItems />
+          {NavData?.map((navData, index) => <NavItems data={navData} key={index}/>)}
         </div>
         {smallNavbar && <SmallNavbar />}
       </div>

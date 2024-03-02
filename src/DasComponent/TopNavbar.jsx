@@ -31,12 +31,12 @@ const TopNavbar = ({ handleNavbar, smallNavbar }) => {
         <ul className="flex justify-center items-center gap-5">
           <li className="relative w-[300px]">
             <input
-              className=" border-themeColor border-2 h-[40px] rounded-full outline-none pl-5 w-full"
+              className=" border-themeColor border-2 h-[35px] rounded-full outline-none pl-5 w-full"
               type="text"
               name="search"
               placeholder="search"
             />
-            <FaSearchengin className="absolute top-[8px] right-[10px] text-2xl text-themeColor" />
+            <FaSearchengin className="absolute top-[5px] right-[10px] text-2xl text-themeColor" />
           </li>
           <li>
             <Image
@@ -74,9 +74,9 @@ const TopNavbar = ({ handleNavbar, smallNavbar }) => {
                 src={"/images/avatar.jpg"}
               />
             </div>
-            <div className="flex flex-col">
-                <span>Mezbah Uddin</span>
-                <span className="text-sm font-light text-textColor">Web Developer</span>
+            <div className="flex flex-col justify-center">
+                <span className="text-sm">Mezbah Uddin</span>
+                <span className="text-xs font-light text-textColor">Web Developer</span>
             </div>
           </li>
           <li>

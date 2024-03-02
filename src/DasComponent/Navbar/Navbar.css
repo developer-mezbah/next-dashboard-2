@@ -87,3 +87,20 @@
     box-shadow: 0 0 0 0 rgba(255, 109, 74, 0), 0 0 0 30px rgba(255, 109, 74, 0);
   }
 }
+
+
+.dropdown-anime{
+  animation: .3s linear dropdown-somoth;
+}
+@keyframes dropdown-somoth {
+  0%{
+    rotate: 90deg;
+    scale: 0;
+    opacity: 0;
+  }
+  100%{
+    rotate: 0deg;
+    opacity: 1;
+    scale: 1;
+  }
+}

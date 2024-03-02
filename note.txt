@@ -1,1 +1,63 @@
 https://spruko.com/demo/ynex/dist/html/alerts.html
+
+
+        Home
+=> hero
+. logo image or text
+. sociol Link 
+    . github
+    . linkedin 
+    . facebook 
+    . medium
+. hero title 
+. hero subtitle
+. hero description
+=> paralax
+. Parrallx content
+=> qualification -1
+. education one
+. education two
+. education three
+. education four
+
+=> qualification -2
+. work one
+. work two
+. work three
+. work four
+
+=> Testimonial
+. sliders
+
+=> Descount section 
+. title 
+. sub title 
+. img 
+=> footer social link 
+. github
+. linkedin 
+. facebook 
+. medium
+
+        About Me 
+.description
+. 03+ Years experience
+. 03+ Completed project
+. 03+ Companies worked
+. Download cv file
+
+        Skills
+. name
+. percentage 
+
+        Services
+
+        Contact
+. email
+. phone
+. location
+
+        Blogs
+. title 
+. description 
+. img 
