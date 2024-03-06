@@ -14,7 +14,7 @@ import { RxDashboard } from "react-icons/rx";
 const TopNavbar = ({ handleNavbar, smallNavbar }) => {
   return (
     <div
-      className="top-navbar bg-white fixed right-0 top-0 h-[65px] flex items-center justify-between px-5"
+      className="top-navbar bg-bgDark fixed right-0 top-0 h-[65px] flex items-center justify-between px-5 border-l-[1px] border-gray-700"
       style={smallNavbar ? { left: "80px" } : { left: "250px" }}
     >
       <div
@@ -51,18 +51,18 @@ const TopNavbar = ({ handleNavbar, smallNavbar }) => {
             <MdOutlineLightMode className="text-xl text-bgDark" />
           </li>
           <li className="relative">
-            <BsCart2 className="text-xl text-bgDark" />
+            <BsCart2 className="text-xl text-white" />
             <span className="absolute text-sm -top-3 -right-2 bg-purple-500 text-white px-1 rounded-full">5</span>
           </li>
           <li className="relative">
-            <MdOutlineNotificationsActive className="text-xl text-bgDark" />
+            <MdOutlineNotificationsActive className="text-xl text-white" />
             <span className="absolute text-sm -top-3 -right-2 bg-blue-500 text-white px-1 rounded-full pulse">5</span>
           </li>
           <li>
-            <RxDashboard className="text-xl text-bgDark" />
+            <RxDashboard className="text-xl text-white" />
           </li>
           <li>
-            <RiFullscreenExitFill className="text-xl text-bgDark" />
+            <RiFullscreenExitFill className="text-xl text-white" />
           </li>
           <li className="flex gap-2">
             <div>
@@ -75,12 +75,12 @@ const TopNavbar = ({ handleNavbar, smallNavbar }) => {
               />
             </div>
             <div className="flex flex-col justify-center">
-                <span className="text-sm">Mezbah Uddin</span>
+                <span className="text-sm text-textColor">Mezbah Uddin</span>
                 <span className="text-xs font-light text-textColor">Web Developer</span>
             </div>
           </li>
           <li>
-            <IoSettingsOutline className="text-xl text-bgDark rotating" />
+            <IoSettingsOutline className="text-xl text-white rotating" />
           </li>
         </ul>
       </div>

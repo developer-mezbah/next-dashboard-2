@@ -43,7 +43,8 @@ const Navbar = () => {
             />
           </div>
           <Horizontal className={"mb-2"} />
-          {NavData?.map((navData, index) => <NavItems data={navData} key={index}/>)}
+          <NavItems data={NavData[0]}/>
+          {NavData?.slice(1).map((navData, index) => <NavItems data={navData} key={index}/>)}
         </div>
         {smallNavbar && <SmallNavbar />}
       </div>

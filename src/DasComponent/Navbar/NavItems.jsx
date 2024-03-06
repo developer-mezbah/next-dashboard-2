@@ -5,7 +5,9 @@ import Link from "next/link";
 import { useState } from "react";
 
 const NavItems = ({ data }) => {
-  const [dropDown, setDropdown] = useState(false);
+  const [dropDown, setDropdown] = useState(
+    data.pageName === "main" ? true : false
+  );
   return (
     <>
       <div className="nav-pages px-5 space-y-2 pb-5 block">
