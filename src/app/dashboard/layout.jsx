@@ -8,8 +8,8 @@ const layout = ({ children }) => {
       <div className="bg-bgDark min-h-screen">
         <Navbar />
       </div>
-      <div className="w-full mt-[45px]">
-        <div className="bg-[url('/images/dashboard-bg.jpg')] bg-fixed bg-center bg-no-repeat bg-cover">
+      <div className="w-full mt-[65px]">
+        <div className="bg-[url('/images/dashboard-bg.jpg')] bg-fixed bg-center bg-no-repeat bg-cover min-h-[88vh]">
           {children}
         </div>
         <div>

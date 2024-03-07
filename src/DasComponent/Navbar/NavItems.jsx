@@ -2,12 +2,30 @@
 import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useRouter, usePathname } from "next/navigation";
+import Horizontal from "../Others/Horizontal";
 
 const NavItems = ({ data }) => {
+  const router = useRouter();
+  const pathname = usePathname();
   const [dropDown, setDropdown] = useState(
     data.pageName === "main" ? true : false
   );
+
+  // when dropdown has 1 items, then its redirect 1 items
+  const handleNavItem = () => {
+    setDropdown(!dropDown);
+    if (data.subItems.length === 1 && !dropDown) {
+      router.push(data.subItems[0].url);
+    }
+  };
+
+  useEffect(() => {
+    if (data.subItems[0].url === pathname) {
+      setDropdown(!dropDown);
+    }
+  }, []);
   return (
     <>
       <div className="nav-pages px-5 space-y-2 pb-5 block">
@@ -15,7 +33,7 @@ const NavItems = ({ data }) => {
           {data.pageName}
         </span>
         <div
-          onClick={() => setDropdown(!dropDown)}
+          onClick={handleNavItem}
           className="nav-title flex justify-between items-center text-textColor cursor-pointer"
         >
           <div className="flex items-center gap-5">
@@ -43,6 +61,9 @@ const NavItems = ({ data }) => {
             ))}
           </ul>
         )}
+      </div>
+      <div className="mb-3">
+        <Horizontal />
       </div>
     </>
   );

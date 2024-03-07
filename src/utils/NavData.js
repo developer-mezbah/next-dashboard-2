@@ -1,37 +1,27 @@
 import { SiPowerpages } from "react-icons/si";
 import { FaHome } from "react-icons/fa";
+import { LuLayoutDashboard } from "react-icons/lu";
+import { ImProfile } from "react-icons/im";
 
 export const NavData = [
   {
     pageName: "main", // Not change able
     pageTitle: "Dashboards",
-    icon: <FaHome />,
+    icon: <LuLayoutDashboard />,
     subItems: [
       {
         name: "Home",
         url: "/dashboard",
-      },
-      {
-        name: "About",
-        url: "/about",
-      },
-      {
-        name: "Home",
-        url: "/dashboard/",
-      },
-      {
-        name: "About",
-        url: "/about",
       },
     ],
   },
   {
     pageName: "pages",
     pageTitle: "Home",
-    icon: <SiPowerpages />,
+    icon: <FaHome />,
     subItems: [
       {
-        name: "Update content",
+        name: "Forms",
         url: "/dashboard/home-page",
       },
       {
@@ -49,25 +39,17 @@ export const NavData = [
     ],
   },
   {
-    pageName: "demo",
-    pageTitle: "Demo Route",
-    icon: <SiPowerpages />,
+    pageName: "personal info",
+    pageTitle: "Profile",
+    icon: <ImProfile />,
     subItems: [
       {
-        name: "no",
-        url: "/dashboard/",
+        name: "My Profile",
+        url: "/dashboard/my-profile",
       },
       {
-        name: "About",
-        url: "/about",
-      },
-      {
-        name: "Home",
-        url: "/dashboard/",
-      },
-      {
-        name: "About",
-        url: "/about",
+        name: "Inbox",
+        url: "/dashboard/inbox",
       },
     ],
   },

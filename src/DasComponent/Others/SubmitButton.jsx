@@ -7,7 +7,7 @@ const SubmitButton = (props) => {
     );
   } else {
     return (
-      <button disabled={true} className={`button-64`}>
+      <button disabled={true} className={`button-64 mb-5`}>
         <span className={`text ${props.className}`}>
           <svg
             aria-hidden="true"
