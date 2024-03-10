@@ -9,15 +9,16 @@ import Horizontal from "../Others/Horizontal";
 const NavItems = ({ data }) => {
   const router = useRouter();
   const pathname = usePathname();
-  const [dropDown, setDropdown] = useState(
-    data.pageName === "main" ? true : false
-  );
+  const [dropDown, setDropdown] = useState(false);
 
   // when dropdown has 1 items, then its redirect 1 items
   const handleNavItem = () => {
     setDropdown(!dropDown);
     if (data.subItems.length === 1 && !dropDown) {
       router.push(data.subItems[0].url);
+    }
+    if (data.pageName === "main") {
+      setDropdown(true)
     }
   };
 

@@ -3,8 +3,9 @@ import SubmitButton from "../Others/SubmitButton";
 
 const Qulification = () => {
   const inputClass =
-    "bg-gray-50 border text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500";
-  const lableClass = "block mb-2 text-sm font-medium text-white";
+    "border text-sm rounded-lg block w-full p-2.5 bg-bgDark border-themeColor placeholder-gray-400 text-white focus:ring-themeColor focus:border-themeColor";
+  const lableClass =
+    "block mb-2 text-sm font-medium text-white";
   return (
     <>
       <div className="dashboard-form-bg flex flex-col">

@@ -1,8 +1,9 @@
+
 const SubmitButton = (props) => {
   if (props.submit === false) {
     return (
       <button onClick={props.onClick} type="submit" className="button-64">
-        <span className={`text ${props.className}`}>{props.text}</span>
+        <span className={`text ${props.className}`} style={{background: props.background}}>{props.text}</span>
       </button>
     );
   } else {

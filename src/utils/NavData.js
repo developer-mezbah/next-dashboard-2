@@ -25,16 +25,16 @@ export const NavData = [
         url: "/dashboard/home-page",
       },
       {
-        name: "About",
-        url: "/about",
+        name: "not-found",
+        url: "/dashboard/not-found",
       },
       {
-        name: "Home",
-        url: "/dashboard/",
+        name: "alert",
+        url: "/dashboard/alert",
       },
       {
-        name: "About",
-        url: "/about",
+        name: "Table",
+        url: "/dashboard/table",
       },
     ],
   },

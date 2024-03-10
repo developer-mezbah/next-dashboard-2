@@ -1,4 +1,5 @@
 "use client";
+import PageTitle from "@/DasComponent/Others/PageTitle";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import DataTable, { createTheme } from "react-data-table-component";
@@ -89,6 +90,7 @@ const page = () => {
   ];
   return (
     <section className="p-10">
+        <PageTitle text={"Dashboard Table"}/>
       <DataTable columns={columns} data={data} pagination theme="solarized" />
     </section>
   );

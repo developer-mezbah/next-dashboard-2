@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,7 +13,26 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className + " bg-bgLight"}>
-      {children}
+        {children}
+
+        <Toaster
+          position="top-center"
+          reverseOrder={false}
+          toastOptions={{
+            success: {
+              style: {
+                background: "green",
+                color: "white"
+              },
+            },
+            error: {
+              style: {
+                background: "#e91e63ab",
+                color: "white"
+              },
+            },
+          }}
+        />
       </body>
     </html>
   );

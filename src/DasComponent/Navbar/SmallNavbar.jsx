@@ -4,7 +4,6 @@ import Horizontal from "../Others/Horizontal";
 import { NavData } from "@/utils/NavData";
 
 const SmallNavbar = () => {
-  console.log(na);
   return (
     <div className="w-[80px]">
       <div className="smaill-logo">
