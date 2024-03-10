@@ -41,7 +41,7 @@ const Navbar = () => {
             <Link href={"/dashboard"}>
               <Image
                 src={"/images/logo.png"}
-                className="mx-auto h-[40px] w-2/5 my-1"
+                className="mx-auto h-[70px] my-1 object-cover"
                 width={200}
                 height={100}
                 alt="Logo"

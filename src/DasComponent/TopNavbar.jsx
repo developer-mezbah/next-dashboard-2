@@ -14,7 +14,7 @@ import { RxDashboard } from "react-icons/rx";
 const TopNavbar = ({ handleNavbar, smallNavbar }) => {
   return (
     <div
-      className="top-navbar bg-bgDark fixed right-0 top-0 h-[65px] flex items-center justify-between px-5 border-l-[1px] border-gray-700"
+      className="top-navbar bg-bgDark fixed right-0 top-0 h-[65px] flex items-center justify-between px-5 border-l-[1px] border-gray-700 z-50"
       style={smallNavbar ? { left: "80px" } : { left: "250px" }}
     >
       <div
