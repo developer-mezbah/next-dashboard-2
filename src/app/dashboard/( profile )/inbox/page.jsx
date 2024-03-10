@@ -10,22 +10,23 @@ const data = [
     email: "developer.mezbah@gmail.com",
     id: 1,
     createAt: "01/ 01/ 2024",
-    id: 10,
+    DeleteID: 10,
   },
   {
     name: "Mezbah Uddin",
     email: "mk6449248@gmail.com",
     id: 2,
     createAt: "01/ 01/ 2024",
-    id: 10,
+    DeleteID: 10,
   },
 ];
+
 createTheme(
   "solarized",
   {
     text: {
       primary: "#268bd2",
-      secondary: "#2aa198",
+      secondary: "#2aa198",// pagination color
     },
     background: {
       default: "#111C43",
@@ -82,7 +83,7 @@ const page = () => {
       name: "Action",
       selector: (row) => (
         <div className="p-2 cursor-pointer text-red-400">
-          <FaTrashCan onClick={() => DeleteMessage(row?.id)} />
+          <FaTrashCan onClick={() => DeleteMessage(row?.DeleteID)} />
         </div>
       ),
     },

@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "@/DasComponent/Navbar/Navbar";
 import Footer from "@/DasComponent/Others/Footer";
 
-const layout = ({ children }) => {
+export default function Layout({ children }) {
   return (
     <div className="flex">
       <div className="bg-bgDark min-h-screen">
@@ -20,4 +20,4 @@ const layout = ({ children }) => {
   );
 };
 
-export default layout;
+

@@ -36,6 +36,10 @@ export const NavData = [
         name: "Table",
         url: "/dashboard/table",
       },
+      {
+        name: "Create Form",
+        url: "/dashboard/create-form",
+      }
     ],
   },
   {

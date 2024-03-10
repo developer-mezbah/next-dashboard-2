@@ -1,6 +1,8 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
+import "react-quill/dist/quill.snow.css";
+import "react-loading-skeleton/dist/skeleton.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,13 +24,13 @@ export default function RootLayout({ children }) {
             success: {
               style: {
                 background: "green",
-                color: "white"
+                color: "white",
               },
             },
             error: {
               style: {
                 background: "#e91e63ab",
-                color: "white"
+                color: "white",
               },
             },
           }}

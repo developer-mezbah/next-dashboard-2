@@ -99,3 +99,26 @@
 .swal2-modal{
   @apply bg-[#38485F] text-white;
 }
+
+
+
+.myQuil {
+  min-height: 300px;
+  width: 100%;
+}
+.ql-snow .ql-editor code {
+  background-color: rgb(0 63 241) !important;
+}
+.ql-snow .ql-editor a {
+  color: rgb(0, 233, 241) !important;
+}
+.ql-container.ql-snow {
+  border: 2px solid #4b5563;
+}
+.ql-toolbar {
+  @apply bg-gray-300;
+}
+
+.ql-editor{
+  min-height: 300px;
+}
