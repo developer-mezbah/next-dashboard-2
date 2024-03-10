@@ -12,8 +12,9 @@ const page = () => {
       <PageTitle text={"Home Page content Edit Section"} />
       <div className="space-y-5">
         <SocialLinks />
-      <ParallaxEffect/>
-      <Qulification/></div>
+        {/* <ParallaxEffect /> */}
+        <Qulification />
+      </div>
     </div>
   );
 };
