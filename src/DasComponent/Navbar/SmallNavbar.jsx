@@ -5,7 +5,7 @@ import { NavData } from "@/utils/NavData";
 
 const SmallNavbar = () => {
   return (
-    <div className="w-[80px]">
+    <div className="md:w-[80px] w-[50px] fixed">
       <div className="smaill-logo">
         <Image
           width={100}
@@ -19,11 +19,8 @@ const SmallNavbar = () => {
       <div className="mt-5 space-y-3">
         {NavData?.map((data, index) => {
           return (
-            <div key={index} className="py-2 px-7 flex flex-col gap-5">
-              <div className="text-2xl text-textColor">{data.icon}</div>
-              <div className="mt-3">
-                <span className="bullet ml-7"></span>
-              </div>
+            <div key={index} className="flex flex-col items-center gap-5">
+              <div className="md:text-2xl text-textColor mt-5">{data.icon}</div>
             </div>
           );
         })}

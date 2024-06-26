@@ -3,11 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import "./Navbar.css";
 import TopNavbar from "../TopNavbar";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Horizontal from "../Others/Horizontal";
 import NavItems from "./NavItems";
 import SmallNavbar from "./SmallNavbar";
 import { NavData } from "@/utils/NavData";
+import { FaSignOutAlt } from "react-icons/fa";
 
 const Navbar = () => {
   const [navToggle, setNavToggle] = useState(false);
@@ -28,20 +29,30 @@ const Navbar = () => {
       setNavToggle(false);
     }
   };
+  useEffect(() => {
+    const width = screen.width;
+    if (width <= 768) {
+      setSmaillNavbar(true);
+    }
+  }, []);
   return (
     <>
       <TopNavbar handleNavbar={handleNavbar} smallNavbar={smallNavbar} />
       <div
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
-        className={smallNavbar ? "w-[80px] h-full" : "w-[250px] h-full"}
+        className={
+          smallNavbar
+            ? "md:w-[80px] w-[50px] h-full"
+            : "md:w-[250px] w-[150px] overflow-x-hidden overflow-y-scroll h-screen dasboard-navbar-scrollbar"
+        }
       >
-        <div className={smallNavbar ? "hidden" : "w-[250px]"}>
+        <div className={smallNavbar ? "hidden" : "md:w-[250px] w-[150px]"}>
           <div className="logo py-2">
             <Link href={"/dashboard"}>
               <Image
                 src={"/images/logo.png"}
-                className="mx-auto h-[70px] my-1 object-cover"
+                className="mx-auto h-[70px] md:w-full w-[150px] my-1 object-cover"
                 width={200}
                 height={100}
                 alt="Logo"
@@ -53,6 +64,12 @@ const Navbar = () => {
           {NavData?.slice(1).map((navData, index) => (
             <NavItems data={navData} key={index} />
           ))}
+          <button onClick={() => {
+            logOut()
+          }} className="flex text-lg text-red-500 items-center gap-5 pl-3">
+            <FaSignOutAlt />
+            Log Out
+          </button>
         </div>
         {smallNavbar && <SmallNavbar />}
       </div>

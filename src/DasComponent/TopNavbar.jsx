@@ -10,12 +10,18 @@ import Image from "next/image";
 import { RiFullscreenExitFill } from "react-icons/ri";
 import { IoSettingsOutline } from "react-icons/io5";
 import { RxDashboard } from "react-icons/rx";
+import Link from "next/link";
+import { useContext } from "react";
 
 const TopNavbar = ({ handleNavbar, smallNavbar }) => {
   return (
     <div
-      className="top-navbar bg-bgDark fixed right-0 top-0 h-[65px] flex items-center justify-between px-5 border-l-[1px] border-gray-700 z-50"
-      style={smallNavbar ? { left: "80px" } : { left: "250px" }}
+      className={`top-navbar bg-bgDark fixed right-0 top-0 h-[65px] flex items-center justify-between px-5 border-l-[1px] border-gray-700 z-50 ${
+        smallNavbar
+          ? "md:left-[80px] left-[50px]"
+          : "left-[150px] md:left-[250px]"
+      }`}
+      // style={smallNavbar ? { left: "80px" } : { left: "250px" }}
     >
       <div
         onClick={handleNavbar}
@@ -29,7 +35,7 @@ const TopNavbar = ({ handleNavbar, smallNavbar }) => {
       </div>
       <div>
         <ul className="flex justify-center items-center gap-5">
-          <li className="relative w-[300px]">
+          <li className="relative hidden lg:block w-[300px]">
             <input
               className=" border-themeColor border-2 h-[35px] rounded-full outline-none pl-5 w-full"
               type="text"
@@ -38,7 +44,7 @@ const TopNavbar = ({ handleNavbar, smallNavbar }) => {
             />
             <FaSearchengin className="absolute top-[5px] right-[10px] text-2xl text-themeColor" />
           </li>
-          <li>
+          <li className=" hidden lg:block">
             <Image
               className="rounded-full w-10 h-10 object-cover"
               width={50}
@@ -52,19 +58,25 @@ const TopNavbar = ({ handleNavbar, smallNavbar }) => {
           </li>
           <li className="relative">
             <BsCart2 className="text-xl text-white" />
-            <span className="absolute text-sm -top-3 -right-2 bg-purple-500 text-white px-1 rounded-full">5</span>
+            <span className="absolute text-sm -top-3 -right-2 bg-purple-500 text-white px-1 rounded-full">
+              5
+            </span>
           </li>
           <li className="relative">
             <MdOutlineNotificationsActive className="text-xl text-white" />
-            <span className="absolute text-sm -top-3 -right-2 bg-blue-500 text-white px-1 rounded-full pulse">5</span>
+            <span className="absolute text-sm -top-3 -right-2 bg-blue-500 text-white px-1 rounded-full pulse">
+              5
+            </span>
           </li>
           <li>
             <RxDashboard className="text-xl text-white" />
           </li>
           <li>
-            <RiFullscreenExitFill className="text-xl text-white" />
+            <Link href="/">
+              <RiFullscreenExitFill className="text-xl text-white" />
+            </Link>
           </li>
-          <li className="flex gap-2">
+          <li className="lg:flex hidden gap-2">
             <div>
               <Image
                 className="w-10 h-10 rounded-full"
@@ -75,8 +87,10 @@ const TopNavbar = ({ handleNavbar, smallNavbar }) => {
               />
             </div>
             <div className="flex flex-col justify-center">
-                <span className="text-sm text-textColor">Mezbah Uddin</span>
-                <span className="text-xs font-light text-textColor">Web Developer</span>
+              <span className="text-sm text-textColor">Mezbah</span>
+              <span className="text-xs font-light text-textColor">
+                Admin
+              </span>
             </div>
           </li>
           <li>

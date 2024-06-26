@@ -3,6 +3,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  width: 100%;
 }
 .navbar-bullet li::before,
 .bullet {
@@ -15,6 +16,7 @@
   background-color: transparent;
   inset-inline-start: 0.5rem;
   opacity: 0.5;
+  @apply md:block hidden;
 }
 .navbar-bullet li:hover:before {
   border: 1px solid #fff;
@@ -103,4 +105,26 @@
     opacity: 1;
     scale: 1;
   }
+}
+
+
+
+/* Custom navbar scroll bar */
+.dasboard-navbar-scrollbar::-webkit-scrollbar{
+  width: 10px;
+}
+/* Track */
+.dasboard-navbar-scrollbar::-webkit-scrollbar-track {
+  background: #111C43;
+}
+
+/* Handle */
+.dasboard-navbar-scrollbar::-webkit-scrollbar-thumb {
+  background: #111C43;
+}
+
+/* Handle on hover */
+.dasboard-navbar-scrollbar::-webkit-scrollbar-thumb {
+  background: #767E92;
+  border-radius: 10px;
 }

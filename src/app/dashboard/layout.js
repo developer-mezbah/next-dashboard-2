@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "@/DasComponent/Navbar/Navbar";
 import Footer from "@/DasComponent/Others/Footer";
+import "./style.css";
 
 export default function Layout({ children }) {
   return (
@@ -18,6 +19,4 @@ export default function Layout({ children }) {
       </div>
     </div>
   );
-};
-
-
+}

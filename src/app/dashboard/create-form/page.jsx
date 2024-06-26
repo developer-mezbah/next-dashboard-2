@@ -7,6 +7,8 @@ import client_api from "@/utils/api_fetch_fun";
 import SubmitButton from "@/DasComponent/Others/SubmitButton";
 import { ErrorToast, SuccessToast } from "@/utils/FormHelper";
 import Editor from "@/utils/Editor";
+
+
 const CreateNewBlogComponent = () => {
   const router = useRouter();
   const [editorData, setEditorData] = useState("");
@@ -23,25 +25,6 @@ const CreateNewBlogComponent = () => {
     let short_des = short_desRef.value;
     let long_des = editorData;
     let img = imgRef.value;
-
-    client_api
-      .create("/api/dashboard/blog/create", {
-        title,
-        keywords,
-        short_des,
-        long_des,
-        img,
-      })
-      .then((res) => {
-        if (res.status === true) {
-          SuccessToast("Blog Create Success!");
-          router.replace("/dashboard/blog/all-blog");
-          setSubmit(false);
-        } else {
-          ErrorToast("Something Went Wrong");
-          setSubmit(false);
-        }
-      });
   };
 
   return (
@@ -57,13 +40,13 @@ const CreateNewBlogComponent = () => {
                   ref={(input) => (titleRef = input)}
                   type="text"
                   placeholder="Title"
-                  className="h-[40px] w-full rounded-lg border border-border bg-transparent px-3 outline-none placeholder:text-sm"
+                  className="das-input"
                 />
                 <input
                   ref={(input) => (keywordsRef = input)}
                   type="text"
                   placeholder="Keywords"
-                  className="h-[40px] w-full rounded-lg border border-border bg-transparent px-3 outline-none placeholder:text-sm"
+                  className="das-input"
                 />
               </div>
               <div className="flex gap-3">
@@ -71,18 +54,18 @@ const CreateNewBlogComponent = () => {
                   ref={(input) => (short_desRef = input)}
                   type="text"
                   placeholder="Short description"
-                  className="h-[40px] w-full rounded-lg border border-border bg-transparent px-3 outline-none placeholder:text-sm"
+                  className="das-input"
                 />
                 <input
                   ref={(input) => (imgRef = input)}
                   type="text"
                   placeholder="Image CDN"
-                  className="h-[40px] w-full rounded-lg border border-border bg-transparent px-3 outline-none placeholder:text-sm"
+                  className="das-input"
                 />
               </div>
             </div>
             <div className="grid gap-2">
-              <label className="text-base">Description Content Edit</label>
+              <label className="text-base text-white">Description Content Edit</label>
               <div className="flex gap-3 pb-[60px]">
                 <Editor data={editorData} onDataChange={setEditorData} />
               </div>
